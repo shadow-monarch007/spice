@@ -4,12 +4,14 @@
 // ============================================
 
 // === DATA ===
-const categories = [
-  { id: 1, name: 'Masala Powders', img: 'assets/images/category-masala.jpg', desc: 'Authentic homemade masala blends' },
-  { id: 2, name: 'Whole Spices', img: 'assets/images/category-whole-spices.jpg', desc: 'Pure and premium whole spices' },
-  { id: 3, name: 'Dry Fruits', img: 'assets/images/category-dry-fruits.jpg', desc: 'Nutritious and fresh dry fruits' },
-  { id: 4, name: 'Gift Boxes', img: 'assets/images/category-gift-boxes.jpg', desc: 'Premium curated gift collections' }
-];
+if (typeof categories === 'undefined') {
+  var categories = [
+    { id: 1, name: 'Masala Powders', img: 'assets/images/category-masala.jpg', desc: 'Authentic homemade masala blends' },
+    { id: 2, name: 'Whole Spices', img: 'assets/images/category-whole-spices.jpg', desc: 'Pure and premium whole spices' },
+    { id: 3, name: 'Dry Fruits', img: 'assets/images/category-dry-fruits.jpg', desc: 'Nutritious and fresh dry fruits' },
+    { id: 4, name: 'Gift Boxes', img: 'assets/images/category-gift-boxes.jpg', desc: 'Premium curated gift collections' }
+  ];
+}
 
 const products = [
   {
