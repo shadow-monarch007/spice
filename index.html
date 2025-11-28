@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Madhu Homemade Masala - Premium handcrafted spices, masalas, and dry fruits. Pure, authentic, made with love.">
+  <meta name="keywords" content="homemade masala, Indian spices, garam masala, dry fruits, organic spices">
+  <title>Madhu Homemade Masala | Premium Handcrafted Spices & Masalas</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="site-header" id="navbar">
+    <nav class="navbar container">
+      <div class="logo" style="background:#040f1a;display:flex;align-items:center;justify-content:center;padding:0.3rem 1rem;border-radius:16px;">
+        <img src="assets/images/logomhm.png" alt="Madhu Homemade Masala Logo" class="navbar-logo" />
+        <span class="site-title">MADHU HOMEMADE MASALA</span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="cart-btn" id="cart-btn" aria-label="View Cart">
+          🛒 <span class="cart-count" id="cart-count">0</span>
+        </button>
+        <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="close-menu" id="close-menu">&times;</button>
+    <ul class="mobile-nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#categories">Categories</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Mobile Bottom Cart Bar -->
+  <div class="mobile-cart-bar" id="mobile-cart-bar" style="display: none;">
+    <div class="cart-info">
+      <div class="cart-total-mobile">₹<span id="cart-total-mobile">0</span></div>
+      <small><span id="cart-count-mobile">0</span> items</small>
+    </div>
+    <button class="view-cart-btn" id="view-cart-mobile">🛒 View Cart</button>
+  </div>
+
+  <!-- Cart Sidebar -->
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button class="close-cart" id="close-cart">&times;</button>
+    </div>
+    <div class="cart-body" id="cart-items">
+      <p class="empty-cart">Your cart is empty</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total:</span>
+        <span class="total-amount">₹<span id="cart-total">0</span></span>
+      </div>
+      <button class="btn-checkout" id="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <h1 class="hero-title animate-fade-in">Pure. Authentic. Homemade Spices.</h1>
+      <p class="hero-subtitle animate-fade-in-delay">Handcrafted masalas made from farm-fresh ingredients.</p>
+      <div class="hero-buttons animate-fade-in-delay-2">
+        <a href="#shop" class="btn-primary">Shop Now</a>
+        <a href="#categories" class="btn-secondary">Explore Categories</a>
+      </div>
+    </div>
+    <div class="spice-particles"></div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Our Categories</h2>
+        <p class="section-subtitle">Explore our premium collection</p>
+      </div>
+      <div class="category-grid" id="category-grid"></div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products" id="shop">
+    <div class="container products_bg">
+      <div class="section-header">
+        <h2 class="section-title">Premium Products</h2>
+        <p class="section-subtitle">Handcrafted with love, delivered with care</p>
+      </div>
+      <div class="product-grid" id="product-grid"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2 class="section-title">Our Story</h2>
+          <div class="story-text">
+            <p>Madhu Homemade Masala was born in Bangalore, Karnataka, starting with just one machine and a passion for authentic flavors. Our journey began with a commitment to quality, using only handpicked ingredients sourced from trusted local farmers.</p>
+            <p>Each masala is crafted in small batches, blending tradition with a touch of innovation. We carefully select, sun-dry, and process our spices to preserve their natural aroma and taste, ensuring every product is as fresh as possible.</p>
+            <p>No shortcuts. No preservatives. Just pure, authentic spices made with patience, care, and love. When you open a jar of Madhu Homemade Masala, you're not just adding flavor to your food—you're bringing home trust, tradition, and the true taste of Karnataka.</p>
+          </div>
+          <div class="about-features">
+            <div class="feature">
+              <div class="feature-icon">🌾</div>
+              <h3>Farm Fresh</h3>
+              <p>Sourced directly from trusted farms</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">👐</div>
+              <h3>Handcrafted</h3>
+              <p>Made in small batches with love</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">✨</div>
+              <h3>Pure & Natural</h3>
+              <p>No additives, no preservatives</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <img src="assets/images/about.jpg" alt="Madhu Homemade Masala Story" onerror="this.src='assets/images/placeholder.jpg'">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-subtitle">Real stories from real people</p>
+      </div>
+      <div class="testimonial-slider" id="testimonial-slider">
+        <div class="testimonial-track" id="testimonial-track">
+          <!-- Testimonials will be injected by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-content">
+        <div class="contact-info">
+          <h2 class="section-title">Get In Touch</h2>
+          <p>Have questions? We'd love to hear from you.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle">
+                <rect x="4" y="8" width="24" height="16" rx="4" fill="#f4e5b8" stroke="#d4af37" stroke-width="2"/>
+                <path d="M4 8l12 10L28 8" stroke="#d4af37" stroke-width="2" fill="none"/>
+              </svg>
+              <div>
+                <h3>Email</h3>
+                <p>contact@madhuhomemademasala.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle">
+                <rect x="8" y="4" width="16" height="24" rx="4" fill="#f4e5b8" stroke="#d4af37" stroke-width="2"/>
+                <circle cx="16" cy="26" r="2" fill="#d4af37"/>
+                <rect x="12" y="8" width="8" height="12" rx="2" fill="#d4af37"/>
+              </svg>
+              <div>
+                <h3>WhatsApp</h3>
+                <p>+91 98765 43210</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle">
+                <ellipse cx="16" cy="12" rx="6" ry="8" fill="#f4e5b8" stroke="#d4af37" stroke-width="2"/>
+                <circle cx="16" cy="12" r="3" fill="#d4af37"/>
+                <rect x="14" y="20" width="4" height="8" rx="2" fill="#d4af37"/>
+              </svg>
+              <div>
+                <h3>Location</h3>
+                <p>Kerala, India</p>
+              </div>
+            </div>
+          </div>
+          <h3>Find Us on Google Maps</h3>
+          <div style="margin-bottom: 1.2rem; line-height: 1.7;"></div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.563310127004!2d77.55258037454612!3d12.935764715664016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f3d82b80a2b%3A0x4314728d18a6db4!2sMadhu%20HomeMade%20Masala!5e0!3m2!1sen!2sin!4v1764301677078!5m2!1sen!2sin" width="95%" height="320" style="border:0; border-radius:12px; margin-bottom:1.5rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="contact-form-wrapper">
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" name="phone" placeholder="Phone Number" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+              <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <div class="footer-logo">Madhu Homemade Masala</div>
+          <p class="footer-motto">Pure. Authentic. Homemade.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="14" cy="14" r="13" stroke="#d4af37" stroke-width="2" fill="#040f1a"/>
+                <path d="M9 19c0-2.5 2-4.5 4.5-4.5S18 16.5 18 19" stroke="#d4af37" stroke-width="2" fill="none"/>
+                <rect x="12" y="10" width="4" height="6" rx="2" fill="#d4af37"/>
+                <ellipse cx="14" cy="8" rx="2" ry="1.2" fill="#d4af37"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="4" width="20" height="20" rx="6" fill="#040f1a" stroke="#d4af37" stroke-width="2"/>
+                <circle cx="14" cy="14" r="5" stroke="#d4af37" stroke-width="2" fill="none"/>
+                <circle cx="19" cy="9" r="1.2" fill="#d4af37"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="14" cy="14" r="13" stroke="#d4af37" stroke-width="2" fill="#040f1a"/>
+                <path d="M9 17c2.5 1.5 7 1.5 10-2.5-2.5 1-4-1-4-3.5" stroke="#d4af37" stroke-width="2" fill="none"/>
+                <ellipse cx="11" cy="11" rx="1.2" ry="1.2" fill="#d4af37"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="WhatsApp">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="14" cy="14" r="13" stroke="#d4af37" stroke-width="2" fill="#040f1a"/>
+                <path d="M10 18c2.5-2 5.5-2 8 0" stroke="#d4af37" stroke-width="2" fill="none"/>
+                <rect x="12" y="10" width="4" height="4" rx="2" fill="#d4af37"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Customer Care</h3>
+          <ul>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Payment Methods</h3>
+          <div class="payment-icons">
+            <span>
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="7" width="22" height="14" rx="3" fill="#f4e5b8" stroke="#d4af37" stroke-width="2"/>
+                <rect x="7" y="15" width="6" height="3" rx="1" fill="#d4af37"/>
+              </svg>
+            </span>
+            <span>
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="14" cy="14" rx="10" ry="7" fill="#f4e5b8" stroke="#d4af37" stroke-width="2"/>
+                <rect x="10" y="10" width="8" height="8" rx="2" fill="#d4af37"/>
+              </svg>
+            </span>
+            <span>
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="7" y="5" width="14" height="18" rx="4" fill="#f4e5b8" stroke="#d4af37" stroke-width="2"/>
+                <circle cx="14" cy="20" r="2" fill="#d4af37"/>
+                <rect x="11" y="9" width="6" height="7" rx="1" fill="#d4af37"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Madhu Homemade Masala. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Success Notification -->
+  <div class="notification" id="notification"></div>
+</body>
+</html>

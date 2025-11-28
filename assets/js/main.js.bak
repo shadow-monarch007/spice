@@ -1,0 +1,120 @@
+// ============================================
+// MADHU HOMEMADE MASALA - E-COMMERCE JS
+// Premium Mobile-First E-Commerce Platform
+// ============================================
+
+// === DATA ===
+const categories = [
+  { id: 1, name: 'Masala Powders', img: 'assets/images/category-masala.svg', desc: 'Authentic homemade masala blends' },
+  { id: 2, name: 'Whole Spices', img: 'assets/images/category-whole-spices.svg', desc: 'Pure and premium whole spices' },
+  { id: 3, name: 'Dry Fruits', img: 'assets/images/category-dry-fruits.svg', desc: 'Nutritious and fresh dry fruits' },
+  { id: 4, name: 'Gift Boxes', img: 'assets/images/category-gift-boxes.svg', desc: 'Premium curated gift collections' }
+];
+
+const products = [
+  {
+    id: 1,
+    name: 'Garam Masala Premium',
+    price: 180,
+    image: 'assets/images/product-garam-masala.svg',
+    description: 'Aromatic blend of premium spices',
+    badge: 'Bestseller',
+    category: 1
+  },
+  {
+    id: 2,
+    name: 'Turmeric Powder',
+    price: 120,
+    image: 'assets/images/product-turmeric.svg',
+    description: 'Pure organic turmeric powder',
+    badge: '',
+    category: 1
+  },
+  {
+    id: 3,
+    name: 'Coriander Powder',
+    price: 100,
+    image: 'assets/images/product-coriander.svg',
+    description: 'Freshly ground coriander',
+    badge: '',
+    category: 1
+  },
+  {
+    id: 4,
+    name: 'Kashmiri Red Chilli',
+    price: 150,
+    image: 'assets/images/product-red-chilli.svg',
+    description: 'Premium Kashmiri red chilli',
+    badge: 'Hot Sale',
+    category: 2
+  },
+  {
+    id: 5,
+    name: 'Whole Black Pepper',
+    price: 280,
+    image: 'assets/images/product-black-pepper.svg',
+    description: 'Premium Tellicherry black pepper',
+    badge: 'Premium',
+    category: 2
+  },
+  {
+    id: 6,
+    name: 'Cardamom Green',
+    price: 450,
+    image: 'assets/images/product-cardamom.svg',
+    description: 'Aromatic green cardamom pods',
+    badge: 'Premium',
+    category: 2
+  },
+  {
+    id: 7,
+    name: 'Premium Almonds',
+    price: 550,
+    image: 'assets/images/product-almonds.svg',
+    description: 'Organic California almonds',
+    badge: '',
+    category: 3
+  },
+  {
+    id: 8,
+    name: 'Cashew Nuts',
+    price: 480,
+    image: 'assets/images/product-cashew.svg',
+    description: 'Premium whole cashew nuts',
+    badge: 'Bestseller',
+    category: 3
+  },
+  {
+    id: 9,
+    name: 'Festive Spice Gift Box',
+    price: 1200,
+    image: 'assets/images/product-gift-box.svg',
+    description: 'Premium spice collection',
+    badge: 'New',
+    category: 4
+  }
+];
+
+const testimonials = [
+  {
+    name: 'Priya Sharma',
+    text: 'The quality of spices is outstanding! I can taste the authenticity in every dish. Madhu Homemade Masala has become our family favorite.',
+    rating: 5
+  },
+  {
+    name: 'Rajesh Kumar',
+    text: 'Fresh, aromatic, and pure! The garam masala is the best I have ever used. Highly recommended for authentic flavors.',
+    rating: 5
+  },
+  {
+    name: 'Anita Desai',
+    text: 'I love the packaging and the quality. The dry fruits are fresh and the spices are so flavorful. Thank you for bringing tradition to our kitchen!',
+    rating: 5
+  },
+  {
+    name: 'Vikram Singh',
+    text: 'Been ordering for 6 months now. Consistent quality and fast delivery. The customer service is also excellent. Will continue buying!',
+    rating: 5
+  }
+];
+// ...existing code...
