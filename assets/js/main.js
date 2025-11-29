@@ -236,8 +236,9 @@ function renderCategories() {
   categories.forEach(category => {
     const card = document.createElement('div');
     card.className = 'category-card';
+    // add onerror fallback so missing images don't break rendering
     card.innerHTML = `
-      <img src="${category.img}" alt="${category.name}">
+      <img src="${category.img}" alt="${category.name}" onerror="this.onerror=null;this.src='assets/images/products_bg.jpg'">
       <h3 class="category-name">${category.name}</h3>
     `;
     card.addEventListener('click', () => filterProductsByCategory(category.id));
@@ -263,7 +264,7 @@ function renderProducts(categoryId = null) {
     card.className = 'product-card';
     card.innerHTML = `
       <div class="product-image-wrapper">
-        <img src="${product.image}" alt="${product.name}" class="product-image">
+        <img src="${product.image}" alt="${product.name}" class="product-image" onerror="this.onerror=null;this.src='assets/images/products_bg.jpg'">
         ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ''}
       </div>
       <div class="product-body">
@@ -359,7 +360,7 @@ function updateCartUI() {
     const cartItem = document.createElement('div');
     cartItem.className = 'cart-item';
     cartItem.innerHTML = `
-      <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+      <img src="${item.image}" alt="${item.name}" class="cart-item-image" onerror="this.onerror=null;this.src='assets/images/products_bg.jpg'">
       <div class="cart-item-details">
         <div class="cart-item-name">${item.name}</div>
         <div class="cart-item-price">₹${item.price} × ${item.quantity}</div>

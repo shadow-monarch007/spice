@@ -7,126 +7,6 @@
   padding-bottom: 2rem;
 }
 
-/* MOBILE: ensure testimonials heading and footer line fit on one line */
-@media (max-width: 820px) {
-  /* Make the testimonials title slightly smaller and keep it on one line */
-  .testimonials .section-title {
-    font-size: 1.1rem; /* smaller to improve fit */
-    line-height: 1.06;
-    white-space: normal; /* allow wrapping */
-    overflow: visible;
-    text-overflow: clip;
-    display: block;
-    text-align: center;
-    padding: 0 0.6rem;
-  }
-
-  .testimonials .section-subtitle {
-    font-size: 0.95rem;
-    margin-top: 0.4rem;
-  }
-
-  /* Footer: keep the 'All Rights Reserved' line on one line and reduce size */
-  .footer-bottom p {
-    font-size: 0.82rem;
-    white-space: normal; /* allow wrap so full text is visible */
-    overflow: visible;
-    text-overflow: clip;
-    margin: 0;
-    padding: 0 0.6rem;
-  }
-}
-
-/* Reduce all section titles/subtitles on mobile for better fit */
-@media (max-width: 820px) {
-  .section-title {
-    font-size: 1.06rem; /* reduced to prevent truncation */
-    line-height: 1.12;
-    margin-bottom: 0.5rem;
-    white-space: normal;
-    overflow: visible;
-  }
-
-  .section-subtitle {
-    font-size: 0.95rem;
-    margin-bottom: 0.9rem;
-  }
-}
-
-/* Additional mobile contact fixes: wrapping, icon sizing and 'Find Us' spacing */
-@media (max-width: 820px) {
-  .contact-details, .contact .contact-content {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .contact-item {
-    width: 100%;
-    box-sizing: border-box;
-    align-items: flex-start;
-    padding: 0.8rem;
-    gap: 0.8rem;
-  }
-
-  .contact-item > div {
-    flex: 1 1 auto;
-    min-width: 0;
-  }
-
-  .contact-item p {
-    white-space: normal;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    font-size: 0.92rem;
-    margin: 0;
-  }
-
-  .contact-item .contact-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 1.35rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .contact-info h3 {
-    margin-top: 0.9rem;
-    margin-bottom: 0.55rem;
-    line-height: 1.25;
-    font-size: 1.05rem;
-  }
-
-  .contact iframe {
-    width: 100% !important;
-    height: 220px !important;
-    border-radius: 10px;
-  }
-}
-
-/* Additional overrides to ensure mobile-only sizing for titles and contact button */
-@media (max-width: 820px) {
-  .site-title {
-    font-size: 0.62rem !important;
-    max-width: calc(100% - 112px) !important; /* reserve space for logo + icons */
-    white-space: nowrap !important; /* keep title on single line */
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-  }
-
-  .contact-form .btn-primary {
-    font-size: 0.84rem !important;
-    padding: 0.36rem 0.6rem !important;
-    min-height: 34px !important;
-    border-radius: 8px !important;
-  }
-
-  .hero-title {
-    font-size: 1.32rem !important;
-    line-height: 1.06 !important;
-  }
-}
-
 /* Optimize product card for performance */
 .product-card {
   background: linear-gradient(120deg, var(--sand-cream) 80%, var(--gold-light) 100%);
@@ -158,6 +38,236 @@
    ============================================ */
 
 /* === CSS VARIABLES - MOBILE-FIRST PREMIUM SPICE PALETTE === */
+/* === MOBILE WEB CHANGES ONLY === */
+/* Hide desktop navbar and show mobile hero header only on mobile */
+@media (max-width: 820px) {
+  /* Hide desktop navbar completely on mobile */
+  .site-header, header.site-header, nav.navbar {
+    display: none !important;
+    height: 0 !important;
+    visibility: hidden !important;
+    position: absolute !important;
+    z-index: -1 !important;
+  }
+  .mobile-hero-header {
+    display: block;
+    width: 100vw;
+    background: #040f1a;
+    padding: 0.5rem 0.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .mobile-hero-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    height: 56px;
+    line-height: 1;
+    padding: 0.1rem 0.6rem;
+  }
+  .navbar-logo {
+    width: 28px !important;
+    height: 28px !important;
+    margin-right: 0.45rem;
+    order: 0;
+    flex: 0 0 28px;        /* fixed size */
+    display: block;
+  }
+  .site-title {
+    font-size: 0.78rem !important;
+    color: #ffd700;
+    white-space: nowrap;
+    flex: 1 1 auto;
+    text-align: left;
+    margin-left: 0.45rem;
+    margin-right: 0.2rem;
+    min-width: 0; /* allow truncation */
+    max-width: calc(100% - 120px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    order: 1;
+  }
+  .cart-btn {
+    background: none;
+    border: none;
+    color: #FFD700 !important;
+    font-size: 1.1rem !important; /* icon size */
+    margin-right: 0.1rem;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    flex: 0 0 40px; /* fixed square size */
+    height: 40px;
+    width: 40px;
+    border-radius: 6px;
+    order: 2;
+  }
+  .hamburger {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    margin-left: 0.2rem;
+    padding: 0 !important;
+    z-index: 1001;
+    flex: 0 0 40px; /* keep fixed size */
+    height: 40px;
+    width: 40px;
+    order: 3;
+  }
+  .hamburger span {
+    width: 20px !important;
+    height: 2px !important;
+    background: #FFD700 !important;
+  }
+  /* Make the cart count a styled yellow dot */
+  .cart-count {
+    display: inline-block;
+    background: #d4af37;
+    color: #040f1a;
+    border-radius: 999px;
+    min-width: 16px;
+    height: 16px;
+    font-size: 0.6rem;
+    line-height: 16px;
+    text-align: center;
+    margin-left: 0.2rem;
+    padding: 0 4px;
+  }
+  /* clamp header height to conserve vertical space on mobile */
+  .mobile-hero-header { height: 56px !important; }
+  body { padding-top: 56px !important; }
+}
+@media (min-width: 821px) {
+  .mobile-hero-header {
+    display: none !important;
+  }
+}
+
+/* Explicit forced styling for the mobile hero header controls to overwrite global styles */
+.mobile-hero-header .cart-btn,
+.mobile-hero-header .hamburger,
+.mobile-hero-header .navbar-logo,
+.mobile-hero-header .site-title {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.mobile-hero-header .cart-btn {
+  width: 40px !important;
+  height: 40px !important;
+  font-size: 1.1rem !important;
+  color: #FFD700 !important;
+}
+.mobile-hero-header .hamburger {
+  width: 40px !important;
+  height: 40px !important;
+}
+.mobile-hero-header .navbar-logo {
+  width: 28px !important;
+  height: 28px !important;
+}
+.mobile-hero-header .site-title {
+  font-size: 0.78rem !important;
+}
+@media (max-width: 820px) {
+  /* 1. Hide nav links on mobile */
+  .nav-links {
+    display: none !important;
+  }
+
+  /* 2. Further reduce navbar title font size */
+  .site-title {
+    font-size: 0.8rem !important;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+  }
+
+  /* Make navbar fixed at top */
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  body {
+    padding-top: 70px;
+  }
+
+  /* 2. Make navbar actions (cart, hamburger) align in one line */
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* 3. Fix 'Explore Categories' button visibility */
+  .explore-btn, .explore-categories-btn {
+    color: #1a1a1a !important;
+    background: #fff8e1 !important;
+    border: 2px solid #d4af37 !important;
+    font-size: 1rem !important;
+    opacity: 1 !important;
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.08);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+}
+/* === CSS RESET FOR CONSISTENCY === */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 :root {
   --black: #0a0a0a;
   --royal-black: #1a1410;
@@ -295,6 +405,7 @@ body {
   background: #040f1a;
   border-radius: 0;
   box-shadow: none;
+}
 }
 
 .nav-links {
@@ -897,6 +1008,88 @@ body {
   margin-bottom: 1rem;
 }
 
+/* MOBILE: show 2 product cards per row and scale cards down for compact mobile layout */
+@media (max-width: 820px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .product-card {
+    border-radius: 10px;
+    padding-bottom: 0.2rem; /* tuck footer a bit more for compactness */
+    overflow: hidden;
+    min-height: auto;
+  }
+
+  .product-image-wrapper {
+    height: 88px; /* further reduced for a more compact card */
+  }
+
+  .product-body {
+    padding: 0.5rem;
+  }
+
+  .product-name {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .product-description {
+    font-size: 0.72rem;
+    margin-bottom: 0.8rem;
+  }
+
+  /* ensure buttons / actions don't overflow the card - make them compact */
+  .product-card .btn-primary, .product-card .add-to-cart-btn {
+    font-size: 0.82rem;
+    padding: 0.45rem 0.65rem;
+    min-height: 36px;
+    border-radius: 10px;
+  }
+
+  /* Qty selector buttons smaller */
+  .qty-selector {
+    padding: 0.25rem 0.35rem;
+    gap: 0.35rem;
+    border-radius: 8px;
+  }
+
+  .qty-selector button {
+    width: 24px;
+    height: 24px;
+    font-size: 0.85rem;
+    border-radius: 6px;
+  }
+
+  .qty-display {
+    min-width: 22px;
+    font-size: 0.9rem;
+  }
+
+  /* hide badges like 'Bestseller', 'Hot Sale' on mobile for cleaner cards */
+  .product-badge {
+    display: none !important;
+  }
+
+  /* make price a bit smaller to fit compact card */
+  .product-price {
+    font-size: 1.0rem; /* slightly reduced */
+    line-height: 1.05;
+    margin-bottom: 0.3rem;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+    color: var(--herbal-dark);
+  }
+
+  /* tighten product-footer spacing for compact layout */
+  .product-footer {
+    margin-top: 0.35rem;
+    gap: 0.4rem;
+    align-items: center;
+  }
+}
+
 .product-footer {
   display: flex;
   justify-content: space-between;
@@ -1416,15 +1609,17 @@ body {
   align-items: center;
   justify-content: space-between;
   z-index: 999;
+  /* Adjustments for mobile header */
+  .mobile-hero-row {
+    height: 56px; /* increased height for bigger logo/title */
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
   border-top: 2px solid var(--gold);
 }
 
 .mobile-cart-bar .cart-info {
   color: var(--gold-light);
-  font-weight: 600;
 }
-
+    padding: 0.2rem 0.6rem;
 .mobile-cart-bar .cart-total-mobile {
   font-size: 1.2rem;
   color: var(--gold);
@@ -1451,6 +1646,7 @@ body {
   .mobile-cart-bar {
     display: none;
   }
+
   .nav-links {
     display: flex;
   }
@@ -1492,295 +1688,4 @@ body {
   .cart-sidebar {
     max-width: 450px;
   }
-}
-/* Consolidated mobile-only rules: hero header + product grid + compact card tweaks */
-@media (max-width: 820px) {
-  /* Hide desktop navbar on mobile and show mobile hero header */
-  .site-header, header.site-header, nav.navbar {
-    display: none !important;
-    height: 0 !important;
-    visibility: hidden !important;
-    position: absolute !important;
-    z-index: -1 !important;
-  }
-
-  .mobile-hero-header {
-    display: block;
-    width: 100vw;
-    background: #040f1a;
-    padding: 0.5rem 0.5rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    height: 56px !important;
-  }
-
-  .mobile-hero-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
-    height: 56px;
-    line-height: 1;
-    padding: 0.1rem 0.6rem;
-  }
-
-  .navbar-logo {
-    width: 28px !important;
-    height: 28px !important;
-    margin-right: 0.45rem;
-    order: 0;
-    flex: 0 0 28px;
-    display: block;
-  }
-
-  .site-title {
-    font-size: 0.78rem !important;
-    color: #ffd700;
-    white-space: nowrap;
-    flex: 1 1 auto;
-    text-align: left;
-    margin-left: 0.45rem;
-    margin-right: 0.2rem;
-    min-width: 0;
-    max-width: calc(100% - 120px);
-    overflow: hidden;
-    text-overflow: ellipsis;
-    order: 1;
-  }
-
-  .cart-btn {
-    background: none;
-    border: none;
-    color: #FFD700 !important;
-    font-size: 1.1rem !important;
-    margin-right: 0.1rem;
-    padding: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1001;
-    flex: 0 0 40px;
-    height: 40px;
-    width: 40px;
-    border-radius: 6px;
-    order: 2;
-  }
-
-  .hamburger {
-    background: none;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 3px;
-    margin-left: 0.2rem;
-    padding: 0 !important;
-    z-index: 1001;
-    flex: 0 0 40px;
-    height: 40px;
-    width: 40px;
-    order: 3;
-  }
-
-  .hamburger span {
-    width: 20px !important;
-    height: 2px !important;
-    background: #FFD700 !important;
-  }
-
-  .cart-count {
-    display: inline-block;
-    background: #d4af37;
-    color: #040f1a;
-    border-radius: 999px;
-    min-width: 16px;
-    height: 16px;
-    font-size: 0.6rem;
-    line-height: 16px;
-    text-align: center;
-    margin-left: 0.2rem;
-    padding: 0 4px;
-  }
-
-  body { padding-top: 56px !important; }
-
-  /* Products grid: 2-up compact cards */
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-  }
-
-  .product-card {
-    border-radius: 10px;
-    padding-bottom: 0.2rem;
-    overflow: hidden;
-    min-height: auto;
-  }
-
-  .product-image-wrapper {
-    height: 88px;
-  }
-
-  .product-body {
-    padding: 0.5rem;
-  }
-
-  .product-name {
-    font-size: 0.9rem;
-    margin-bottom: 0.4rem;
-  }
-
-  .product-description {
-    font-size: 0.72rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .product-card .btn-primary, .product-card .add-to-cart-btn {
-    font-size: 0.82rem;
-    padding: 0.45rem 0.65rem;
-    min-height: 36px;
-    border-radius: 10px;
-  }
-
-  .qty-selector {
-    padding: 0.25rem 0.35rem;
-    gap: 0.35rem;
-    border-radius: 8px;
-  }
-
-  .qty-selector button {
-    width: 24px;
-    height: 24px;
-    font-size: 0.85rem;
-    border-radius: 6px;
-  }
-
-  .qty-display {
-    min-width: 22px;
-    font-size: 0.9rem;
-  }
-
-  .product-price {
-    font-size: 1.0rem;
-    line-height: 1.05;
-    margin-bottom: 0.3rem;
-    font-family: "Times New Roman", Times, serif;
-    font-weight: 700;
-    color: var(--herbal-dark);
-  }
-
-  .product-footer {
-    margin-top: 0.35rem;
-    gap: 0.4rem;
-    align-items: center;
-  }
-
-  .product-badge { display: none !important; }
-
-  /* ==============================
-     MOBILE: About / "Our Story" redesign
-     Stacked card look: readable heading, padded text card, image below
-     ============================== */
-  .about {
-    padding: 1.5rem 0;
-    background: linear-gradient(180deg, var(--parchment) 0%, var(--beige) 100%);
-  }
-
-  .about .about-content {
-    display: block;
-    gap: 1rem;
-    padding: 0 0.6rem;
-  }
-
-  .about-text {
-    background: linear-gradient(180deg, var(--beige) 0%, rgba(249,245,237,0.95) 100%);
-    padding: 1rem 1.1rem;
-    border-radius: 14px;
-    box-shadow: 0 8px 28px rgba(4,15,26,0.06);
-    color: var(--royal-black);
-    border-left: 6px solid var(--gold);
-    position: relative;
-  }
-
-  .about .section-title {
-    font-size: 1.8rem;
-    margin-bottom: 0.6rem;
-    color: var(--royal-black);
-    text-align: left;
-    font-family: var(--font-heading);
-    letter-spacing: 0.2px;
-  }
-
-  .story-text p {
-    font-size: 1rem;
-    line-height: 1.95;
-    color: var(--cinnamon);
-    margin-bottom: 0.9rem;
-    text-align: left;
-  }
-
-  .about-image {
-    margin-top: 0.9rem;
-  }
-
-  .about-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: var(--shadow-soft);
-  }
-
-  /* hide the extra feature tiles on small phones to reduce clutter */
-  .about-features {
-    display: none;
-  }
-
-  /* On mobile, use the about image as a section background instead of a separate inline image */
-  .about {
-    background-image: url("../images/about.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    padding: 2rem 0.6rem; /* give extra vertical spacing when background used */
-  }
-
-  /* dark overlay so text remains readable over background */
-  .about::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(4,15,26,0.45);
-    z-index: 1;
-    border-radius: 0;
-  }
-
-  /* bring text card above overlay and make it semi-opaque to blend with bg */
-  .about .about-content,
-  .about .about-text {
-    position: relative;
-    z-index: 2;
-    background: rgba(255, 250, 243, 0.72); /* slightly transparent so bg shows */
-    padding: 1rem;
-    border-radius: 12px;
-    backdrop-filter: blur(6px); /* subtle blur to improve readability */
-  }
-
-  /* hide inline image element when background is used */
-  .about-image { display: none !important; }
-
-  /* Author / signature style like the reference */
-  .about .author {
-    display: block;
-    text-align: right;
-    font-style: italic;
-    margin-top: 0.6rem;
-    color: rgba(26,20,16,0.85);
-    font-size: 0.95rem;
-  }
-
 }
